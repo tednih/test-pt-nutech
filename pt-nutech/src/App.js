@@ -5,18 +5,10 @@ import TambahBarang from "./Barang/tambahBarang";
 import EditBarang from "./Barang/editBarang";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-const cors = require('cors')
 
 const App = () => {
-app.use(cors(
-  {
-    origin: ["https://test-pt-nutech.vercel.app"],
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true
-  }
-  ));
-  //API
 
+  //API
   //state
   const [barangs, setBarangs] = useState(null);
   const [create, setCreate] = useState({
