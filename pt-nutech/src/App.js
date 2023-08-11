@@ -34,7 +34,7 @@ const App = () => {
 
   //function
   const readBarangs = async () => {
-    const res = await axios.get("http://localhost:3001/read-barang");
+    const res = await axios.get("https://test-pt-nutech.vercel.app/read-barang");
     setBarangs(res.data.barang);
   };
 
@@ -49,7 +49,7 @@ const App = () => {
   const createBarang = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post("http://localhost:3001/create-barang", create);
+    const res = await axios.post("https://test-pt-nutech.vercel.app/create-barang", create);
 
     setBarangs([...barangs, res.data.barang]);
 
@@ -63,7 +63,7 @@ const App = () => {
   };
 
   const deleteBarang = async (_id) => {
-    await axios.delete(`http://localhost:3001/delete-barang/${_id}`);
+    await axios.delete(`https://test-pt-nutech.vercel.app/delete-barang/${_id}`);
 
     const newBarang = [...barangs].filter((barang) => {
       return barang._id !== _id;
@@ -86,7 +86,7 @@ const App = () => {
     const { foto, nama, hargaBeli, hargaJual, stok } = updateForm;
 
     const res = await axios.put(
-      `http://localhost:3001/update-barang/${updateForm._id}`,
+      `https://test-pt-nutech.vercel.app/update-barang/${updateForm._id}`,
       {
         foto,
         nama,
