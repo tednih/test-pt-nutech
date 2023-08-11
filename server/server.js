@@ -8,7 +8,13 @@ const app = express();
 const cors = require("cors");
 DB();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://test-pt-nutech.vercel.app"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.get("/", (req, res) => {
   res.json("Backend for PT Nutech CRUD");
