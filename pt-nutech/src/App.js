@@ -10,7 +10,7 @@ const cors = require('cors')
 const App = () => {
 app.use(cors(
   {
-    origin: ["https://test-pt-nutech.vercel.app/"],
+    origin: ["https://test-pt-nutech.vercel.app"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
   }
