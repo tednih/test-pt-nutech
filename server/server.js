@@ -10,7 +10,7 @@ DB();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://test-pt-nutech.vercel.app"],
+    origin: ["https://test-pt-nutech-backend.vercel.app"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
